@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dennalbo Beach Bar Menu</title>
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://unpkg.com/react-qr-code/dist/react-qr-code.umd.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -44,64 +40,57 @@
     li {
       margin-bottom: 6px;
     }
-    .qr {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-    .qr p {
-      margin-top: 10px;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
   <h1>Dennalbo Beach Bar Menu</h1>
-  <div id="root"></div>
-  <script type="text/babel">
-    const { QRCode } = window['react-qr-code'];
-    const MenuSection = ({ title, items }) => (
-      <div className="card">
-        <h2>{title}</h2>
-        <ul>
-          {items.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    );
-    const App = () => {
-      const menuUrl = "https://dennalbo-menu.vercel.app";
-      return (
-        <div className="grid">
-          <MenuSection title="Cocktails" items={[
-            "Pina Colada - 500L", "Blue Lagoon - 600L", "Mojito - 600L",
-            "Tequila Sunrise - 600L", "Tonic Gin - 550L", "Vodka Sour - 600L",
-            "Sex on the Beach - 550L", "Aperol Spritz - 500L",
-            "Limoncelo Spritz - 550L", "Vodka Redbull - 600L",
-          ]} />
-          <MenuSection title="Drinks & Coffee" items={[
-            "Bravo - 200L", "B52 - 200L", "Kafe - 100L", "Makiato - 100L",
-            "Kapucino - 250L", "Frappe - 250L", "Ice Coffee - 250L",
-            "Milkshake - 250L", "Uje - 100L", "Red Bull - 350L",
-            "Leng Portokalli - 200L", "Crodino - 250L", "Zhveps - 150L",
-            "Bitter - 150L",
-          ]} />
-          <MenuSection title="Beer" items={[
-            "Corona - 400L", "Heineken - 300L", "Peroni - 250L",
-            "Korca - 250L", "Budvar - 250L", "Paulaner - 400L",
-            "Bavaria 0.0 - 250L",
-          ]} />
-          <div className="card qr">
-            <h2>Scan Menu QR</h2>
-            <QRCode value={menuUrl} size={150} />
-            <p>Scan this QR code to view the menu on your phone!</p>
-          </div>
-        </div>
-      );
-    };
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-  </script>
+  <div class="grid">
+    <div class="card">
+      <h2>Cocktails</h2>
+      <ul>
+        <li>Pina Colada - 500L</li>
+        <li>Blue Lagoon - 600L</li>
+        <li>Mojito - 600L</li>
+        <li>Tequila Sunrise - 600L</li>
+        <li>Tonic Gin - 550L</li>
+        <li>Vodka Sour - 600L</li>
+        <li>Sex on the Beach - 550L</li>
+        <li>Aperol Spritz - 500L</li>
+        <li>Limoncelo Spritz - 550L</li>
+        <li>Vodka Redbull - 600L</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Drinks & Coffee</h2>
+      <ul>
+        <li>Bravo - 200L</li>
+        <li>B52 - 200L</li>
+        <li>Kafe - 100L</li>
+        <li>Makiato - 100L</li>
+        <li>Kapucino - 250L</li>
+        <li>Frappe - 250L</li>
+        <li>Ice Coffee - 250L</li>
+        <li>Milkshake - 250L</li>
+        <li>Uje - 100L</li>
+        <li>Red Bull - 350L</li>
+        <li>Leng Portokalli - 200L</li>
+        <li>Crodino - 250L</li>
+        <li>Zhveps - 150L</li>
+        <li>Bitter - 150L</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Beer</h2>
+      <ul>
+        <li>Corona - 400L</li>
+        <li>Heineken - 300L</li>
+        <li>Peroni - 250L</li>
+        <li>Korca - 250L</li>
+        <li>Budvar - 250L</li>
+        <li>Paulaner - 400L</li>
+        <li>Bavaria 0.0 - 250L</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
